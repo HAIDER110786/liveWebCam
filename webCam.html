@@ -13,21 +13,71 @@
             <canvas></canvas>
         </div>
         <div class="spacing"></div>
-        <div class="videoControlsDiv">
+        <div class="videoControlsDiv">                
             <div class="photoCaptureDiv">
-                <div class="capturedImageDiv"></div>
-            </div>
-            <button>Take Photo</button>
+            </div>            
+            <button style="width: 300px;padding: 10px;border-radius: 5px;background-color: cornflowerblue;margin-bottom: 10px;">Take Photo</button>
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 100%;">
+        <div class="inputDiv">
             <div>
-                <div class="filterDiv">
-                    <input type="range" name="" id="">
-                    <input type="range" name="" id="">
-                    <input type="range" name="" id="">
-                    <input type="range" name="" id="">
-                    <input type="range" name="" id="">
-                    <input type="range" name="" id="">
+                <div>
+                    <label for="rmin">
+                        min red
+                    </label>
+                    <input type="range" name="rmin" id="rmin" min="0" max="255">
+                </div>
+                <div>
+                    <label for="gmin">
+                        min green
+                    </label>
+                    <input type="range" name="gmin" id="gmin" min="0" max="255">
+                </div>
+                <div>
+                    <label for="bmin">
+                        min blue
+                    </label>
+                    <input type="range" name="bmin" id="bmin" min="0" max="255">
                 </div>
             </div>
+            <div>
+                <div>
+                    <label for="rmax">
+                        max red
+                    </label>
+                    <input type="range" name="rmax" id="rmax" min="0" max="255">
+                </div>
+                <div>
+                    <label for="gmax">
+                        max green
+                    </label>
+                    <input type="range" name="gmax" id="gmax" min="0" max="255">
+                </div>
+                <div>
+                    <label for="bmax">
+                        max blue
+                    </label>
+                    <input type="range" name="bmax" id="bmax" min="0" max="255">
+                </div>
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <div style="display: flex;flex-direction: row">
+                <button data-button-effect="1">RED EFFECT</button>
+                <button data-button-effect="2">GREEN EFFECT</button>
+            </div>
+            <div style="display: flex;flex-direction: row">
+                <button data-button-effect="3">BLUE EFFECT</button>
+                <button data-button-effect="4">SPLIT PIXELS</button>
+            </div>
+            <div style="width: 100%;">   
+                <button style="width: 98%;height: 30px;background-color: bisque;" data-button-effect="5">RESET</button>
+            </div>
+        </div>
+        <div style="padding: 10px;width: 110%;display:flex;flex-direction:column;justify-content: space-between;">
+            Note : Click the image to download it <br>
+            Note : Increment and Decrement the input values to see the transparency in the image
         </div>
     </div>
     <script src="./JS/webCam.js"></script>
